@@ -1,0 +1,49 @@
+@use "variaveis";
+
+.o-filme {
+  &__img {
+    position: relative;
+    width: 100%;
+    z-index: -1;
+    display: block;
+    opacity: 0.7;
+  }
+
+  &__description {
+    color: variaveis.$corPrincipal;
+    position: absolute;
+    left: 50%;
+    bottom: 30%;
+    width: calc(50% - 24vw);
+    padding: 0.5vw;
+    max-width: 500px;
+
+    @media screen and (max-width: 1024px) {
+      bottom: 40%;
+      right: 0;
+      width: 50%;
+    }
+
+    @media screen and (max-width: 768px) {
+      bottom: 50%;
+    }
+
+    @media screen and (max-width: 425px) {
+      position: relative;
+      width: 90%;
+      left: 10px;
+      margin: 2rem auto;
+    }
+
+    h2 {
+      margin-bottom: 24px;
+
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 8px;
+      }
+    }
+    p {
+      line-height: 1.5rem;
+    }
+  }
+}

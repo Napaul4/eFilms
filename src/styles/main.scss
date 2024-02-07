@@ -1,0 +1,26 @@
+@use "variaveis";
+@use "header";
+@use "o-filme";
+@use "indicacoes";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: variaveis.$fontFamily;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: variaveis.$corPrincipal;
+  text-decoration: none;
+}
+
+body {
+  background-color: variaveis.$backgroundHeader;
+  color: variaveis.$corPrincipal;
+}
+

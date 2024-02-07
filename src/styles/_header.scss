@@ -1,0 +1,36 @@
+@use "variaveis";
+.header {
+  padding: 0.5rem;
+  color: variaveis.$corPrincipal;
+
+  &__container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+  }
+
+  &__dropdown {
+    display: flex;
+    align-items: center;
+
+    &__user {
+      width: 3.5rem;
+      border-radius: 50%;
+      margin: 0 0.5rem;
+    }
+
+    &__menu {
+      background-color: transparent;
+      border: none;
+      color: variaveis.$corPrincipal;
+
+      option {
+        background-color: variaveis.$backgroundHeader;
+        color: variaveis.$corPrincipal;
+        border: none;
+      }
+    }
+  }
+}

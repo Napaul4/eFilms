@@ -1,0 +1,43 @@
+@use "variaveis";
+
+.indicacoes {
+  max-width: 1200px;
+  margin: 24px auto;
+
+  h2 {
+    border-bottom: 1px solid variaveis.$corPrincipal;
+    padding-bottom: 8px;
+
+    @media screen and (max-width: 1024px) {
+      max-width: 97%;
+      margin: 24px auto 0;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 425px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__img {
+      margin: 2rem 1rem;
+      max-height: 240px;
+      object-fit: cover;
+      height: 100%;
+      max-width: 162px;
+      border-radius: 4px;
+    }
+  }
+}
